@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Slider with Hover</title>
+  <style>
+    body {
+      background-color: #353b48;
+      margin: 0;
+      padding: 0;
+    }
+
+    .slider-container {
+      overflow: hidden;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .slider-track {
+      display: flex;
+      gap: 40px;
+      animation: scrollLeft 30s linear infinite;
+      width: max-content;
+    }
+
+    .slider-track img {
+      width: 300px;
+      height: 300px;
+      border-radius: 10px;
+      transition: transform 0.4s ease-in-out;
+      cursor: pointer;
+    }
+
+    .slider-track img:hover {
+      transform: scale(1.2);
+      z-index: 1;
+    }
+
+    @keyframes scrollLeft {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider-track">
+      <img src="/signup.jpg" alt="Image" />
+      <img src="/signup.jpg" alt="Image" />
+      <img src="/signup.jpg" alt="Image" />
+      <img src="/signup.jpg" alt="Image" />
+      <img src="/signup.jpg" alt="Image" />
+      <img src="/signup.jpg" alt="Image" />
+      <img src="/signup.jpg" alt="Image" />
+      <img src="/signup.jpg" alt="Image" />
+    </div>
+  </div>
+</body>
+</html>
